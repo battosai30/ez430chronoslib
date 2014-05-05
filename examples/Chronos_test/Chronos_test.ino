@@ -5,7 +5,8 @@
 
 void setup()
 {
-      
+
+  WDTCTL = WDTPW | WDTHOLD; // necessary to enable low power in Energia. millis() and micros() not more usable
   lcd_init();
   
   RTC_init(55,12,12,3, MONDAY,6,1987);
