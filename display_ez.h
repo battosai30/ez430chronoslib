@@ -10,7 +10,7 @@
 // Constants defined in library
 extern const unsigned char *segments_lcdmem[];
 extern const  char segments_bitmask[];
-extern const char int_to_array_conversion_table[][3];
+extern const char int_to_array_conversion_table[][4];
 extern const  char lcd_font[];
 
 // *************************************************************************************************
@@ -265,7 +265,7 @@ void display_value( char segments, unsigned long value,  char digits, char blank
 
 
 // Integer to string conversion
- char *int_to_array( long n,  char digits,  char blanks);
+char *int_to_array(uint32_t n, uint8_t digits, uint8_t blanks);
 
 // Segment index helper function
  char switch_seg(char line,  char index1,  char index2);
